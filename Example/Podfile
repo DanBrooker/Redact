@@ -1,0 +1,7 @@
+pod "redact", :path => "../redact.podspec"
+
+target "Demo" do
+end
+
+target "DemoTests" do
+end
