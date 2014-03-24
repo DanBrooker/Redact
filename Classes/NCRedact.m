@@ -76,14 +76,36 @@
     //    BOOL colours = (xcode_colors && (strcmp(xcode_colors, "YES") == 0));
     
     NSMutableString *mutable = [string mutableCopy];
-//    NSDictionary *dict = NCRedact.sharedInstance.redacthesaurus;
+    
+    // Simple find and replace for word swaps
     [mutable substituteAllInPlace:NCRedact.sharedInstance.redacthesaurus];
     
+    // Slightyl more complex search for key value pairs
     [NCRedact.sharedInstance.redactionary enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        NSString *format = [NSString stringWithFormat:@"%%@%@%%@ = %%@;\n",key];
-        NSString *regexp = [NSString stringWithFormat:format,@"\"?",@"\"?",@".*?"];
         
-        [mutable substituteAllInPlace:regexp with:[NSString stringWithFormat:format,@"",@"",obj]];
+        // NSDictionary description format
+        NSString *regexp = [NSString stringWithFormat:@"\"%@\" = .*?;",key];
+        [mutable substituteAllInPlace:regexp with:[NSString stringWithFormat:@"%@ = %@;",key,obj]];
+        
+//        // CoreData description format
+//        regexp = [NSString stringWithFormat:@"\"%@\" = .*?;",key];
+//        [mutable substituteAllInPlace:regexp with:[NSString stringWithFormat:@"%@ = %@;",key,obj]];
+        
+        // key = value; and key=value,
+        regexp = [NSString stringWithFormat:@"%@ ?= ?.*?[;,]",key];
+        [mutable substituteAllInPlace:regexp with:[NSString stringWithFormat:@"%@ = %@;",key,obj]];
+        
+        // key = value and key=value
+        regexp = [NSString stringWithFormat:@"%@ ?= ?.*?$",key];
+        [mutable substituteAllInPlace:regexp with:[NSString stringWithFormat:@"%@ = %@",key,obj]];
+        
+        // key: value; and key : value,
+        regexp = [NSString stringWithFormat:@"%@ ?: ?.*?[;,]",key];
+        [mutable substituteAllInPlace:regexp with:[NSString stringWithFormat:@"%@: %@;",key,obj]];
+        
+        // key: value and key : value
+        regexp = [NSString stringWithFormat:@"%@ ?: ?.*?$",key];
+        [mutable substituteAllInPlace:regexp with:[NSString stringWithFormat:@"%@: %@",key,obj]];
     }];
     
     return [mutable copy];

@@ -2,7 +2,7 @@ pod "redact", :path => "../redact.podspec"
 
 # target "Demo" do
 # end
-# 
+
 target "UnitTests" do
-    #    pod 'NSString+Ruby', '~> 1.1'
+    pod 'NSObject+AutoDescription', '~> 0.1'
 end
