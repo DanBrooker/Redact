@@ -1,7 +1,8 @@
 pod "redact", :path => "../redact.podspec"
 
-target "Demo" do
-end
-
-target "DemoTests" do
+# target "Demo" do
+# end
+# 
+target "UnitTests" do
+    #    pod 'NSString+Ruby', '~> 1.1'
 end

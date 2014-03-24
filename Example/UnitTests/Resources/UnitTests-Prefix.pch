@@ -1,0 +1,9 @@
+#import "Demo-Prefix.pch"
+
+#ifdef __OBJC__
+
+#import "Redact.h"
+#import "NCRedact+Testing.h"
+#import "NSString+Ruby.h"
+
+#endif

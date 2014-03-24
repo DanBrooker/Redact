@@ -1,0 +1,17 @@
+PODS:
+  - NSString+Ruby (1.1)
+  - redact (0.1.0)
+
+DEPENDENCIES:
+  - NSString+Ruby (~> 1.1)
+  - redact (from `../redact.podspec`)
+
+EXTERNAL SOURCES:
+  redact:
+    :path: ../redact.podspec
+
+SPEC CHECKSUMS:
+  NSString+Ruby: 00549a8f8903f62ce4aa17da96b9b5fd950e96b4
+  redact: 129d4e662922ffbebbb7f2da1009b2de4e868493
+
+COCOAPODS: 0.29.0
