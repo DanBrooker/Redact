@@ -7,7 +7,15 @@
 //
 
 #import "NCAppDelegate.h"
+#import "Redact.h"
+
+#define NSLog RedactedLog
 
 @implementation NCAppDelegate
+
+- (void)applicationDidFinishLaunching:(UIApplication *)application
+{
+    NSLog(@"password = %@",@"super-secret-password");
+}
 
 @end

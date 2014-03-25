@@ -4,5 +4,8 @@ pod "redact", :path => "../redact.podspec"
 # end
 
 target "UnitTests" do
+    pod 'NSString+Ruby'
     pod 'NSObject+AutoDescription', '~> 0.1'
 end
+
+inhibit_all_warnings!

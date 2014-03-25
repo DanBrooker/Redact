@@ -1,11 +1,11 @@
 PODS:
   - NSObject+AutoDescription (0.1)
   - NSString+Ruby (1.1)
-  - redact (0.1.0):
-    - NSString+Ruby (~> 1.1)
+  - redact (0.1.0)
 
 DEPENDENCIES:
   - NSObject+AutoDescription (~> 0.1)
+  - NSString+Ruby
   - redact (from `../redact.podspec`)
 
 EXTERNAL SOURCES:
@@ -15,6 +15,6 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   NSObject+AutoDescription: 95a585c85920551aed4ab18a5b96f62a572e0ef0
   NSString+Ruby: 00549a8f8903f62ce4aa17da96b9b5fd950e96b4
-  redact: 540e16122e997d5225f22b76e221099af35e306b
+  redact: 798c4b9972c74166e02e16e88d32b559e4cf2be3
 
 COCOAPODS: 0.29.0

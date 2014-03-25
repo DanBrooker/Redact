@@ -39,7 +39,7 @@
 - (void)testRedactsOtherKeywordsFromDictionary
 {
     NSDictionary *dictionary = @{@"password":@"secret",@"private_key":@"jdzfbd623hirkjbb7"};
-    [NCRedact addRedactKey:@"private_key"];
+    [NCRedact addRedactedKey:@"private_key"];
     
     NSString *redacted = [dictionary redactedDescription];
     

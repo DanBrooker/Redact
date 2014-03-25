@@ -36,7 +36,7 @@
     
     XCTAssertTrue([longerPath includes:path],@"full path is present");
     
-    [NCRedact addRedactString:path];
+    [NCRedact addRedactedString:path];
     
     NSString *redactedPath = [longerPath redactedDescription];
     XCTAssertFalse([redactedPath includes:path],@"full path has been trimmed to reduce visual spam");

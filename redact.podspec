@@ -1,9 +1,3 @@
-#
-# Be sure to run `pod spec lint redact.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# To learn more about the attributes see http://guides.cocoapods.org/syntax/podspec.html
-#
 Pod::Spec.new do |s|
   s.name             = "redact"
   s.version          = "0.1.0"
@@ -14,11 +8,11 @@ Pod::Spec.new do |s|
                        
                        By default redacts the password property for objects and dictionaries.
                        DESC
-  s.homepage         = "http://github.com/DanBrooker/redact"
+  s.homepage         = "https://github.com/DanBrooker/redact"
   # s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Daniel Brooker" => "dan@nocturnalcode.com" }
-  s.source           = { :git => "http://github.com/DanBrooker/redact.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/DanBrooker/redact.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/DraconisNZ'
 
   # s.platform     = :ios, '5.0'
@@ -32,7 +26,5 @@ Pod::Spec.new do |s|
   s.ios.exclude_files = 'Classes/osx'
   s.osx.exclude_files = 'Classes/ios'
   # s.public_header_files = 'Classes/**/*.h'
-  # s.frameworks = 'SomeFramework', 'AnotherFramework'
-  s.dependency 'NSString+Ruby', '~> 1.1'
 
 end

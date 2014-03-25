@@ -11,22 +11,10 @@
 		23D63C2427D843E7A8FE53BD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332BDE86D80741E9BDB4217E /* XCTest.framework */; };
 		460FB1B9695348CFB2758C60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BC40083283B49E6B66B3A80 /* Images.xcassets */; };
 		4A22BCF19FC44FF9BA608862 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AE7E5D2506447DBE048DCF /* main.m */; };
-		65BC2DB618DE626A002A9995 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 65BC2DB318DE626A002A9995 /* .gitkeep */; };
-		65BC2DB718DE626A002A9995 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 65BC2DB518DE626A002A9995 /* .gitkeep */; };
-		65BC2DC818DE6519002A9995 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 65BC2DB918DE6519002A9995 /* .gitkeep */; };
-		65BC2DC918DE6519002A9995 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 65BC2DBB18DE6519002A9995 /* .gitkeep */; };
-		65BC2DCA18DE6519002A9995 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 65BC2DBD18DE6519002A9995 /* .gitkeep */; };
-		65BC2DCB18DE6519002A9995 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 65BC2DBF18DE6519002A9995 /* .gitkeep */; };
 		65BC2DCC18DE6519002A9995 /* NCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC2DC118DE6519002A9995 /* NCAppDelegate.m */; };
-		65BC2DCD18DE6519002A9995 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 65BC2DC318DE6519002A9995 /* .gitkeep */; };
-		65BC2DCE18DE6519002A9995 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 65BC2DC518DE6519002A9995 /* .gitkeep */; };
-		65BC2DCF18DE6519002A9995 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 65BC2DC718DE6519002A9995 /* .gitkeep */; };
-		65BC2DE618DE6EBA002A9995 /* NSObject+Redact.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC2DE518DE6EBA002A9995 /* NSObject+Redact.m */; };
-		65BC2DE718DE6EBA002A9995 /* NSObject+Redact.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC2DE518DE6EBA002A9995 /* NSObject+Redact.m */; };
 		65BC2DE918DE7037002A9995 /* NCStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC2DE818DE7037002A9995 /* NCStringTests.m */; };
 		65BC2DEB18DE9A82002A9995 /* NCDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC2DEA18DE9A82002A9995 /* NCDictionaryTests.m */; };
-		65BC2DEE18DE9D8B002A9995 /* NCRedact.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC2DED18DE9D8B002A9995 /* NCRedact.m */; };
-		65BC2DEF18DE9D8B002A9995 /* NCRedact.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC2DED18DE9D8B002A9995 /* NCRedact.m */; };
+		65BC2DFC18DFCC1A002A9995 /* NCObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC2DFB18DFCC1A002A9995 /* NCObjectTests.m */; };
 		7AFA99A968ED44AB904F5A51 /* libPods-UnitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CC1A1BFABF4820A0FFFB34 /* libPods-UnitTests.a */; };
 		9E459C433AD543619EB8FBBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2EB8AA8E164824B3EA484B /* Foundation.framework */; };
 		C3860AA083854B5C87EE804B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CA572CFD634438853A9359 /* UIKit.framework */; };
@@ -67,6 +55,8 @@
 		65BC2DEA18DE9A82002A9995 /* NCDictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDictionaryTests.m; sourceTree = "<group>"; };
 		65BC2DEC18DE9D8B002A9995 /* NCRedact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCRedact.h; sourceTree = "<group>"; };
 		65BC2DED18DE9D8B002A9995 /* NCRedact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCRedact.m; sourceTree = "<group>"; };
+		65BC2DF718DFBF33002A9995 /* NCRedact+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NCRedact+Testing.h"; sourceTree = "<group>"; };
+		65BC2DFB18DFCC1A002A9995 /* NCObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCObjectTests.m; sourceTree = "<group>"; };
 		70FCF017BBCE4A21B5F05B59 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		973E384A979B4CABB958DA0B /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9758D2F5B16E4D26BC1EDFE0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +131,7 @@
 				65BC2DED18DE9D8B002A9995 /* NCRedact.m */,
 				65BC2DE418DE6EBA002A9995 /* NSObject+Redact.h */,
 				65BC2DE518DE6EBA002A9995 /* NSObject+Redact.m */,
+				65BC2DF718DFBF33002A9995 /* NCRedact+Testing.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -241,6 +232,7 @@
 			children = (
 				65BC2DE818DE7037002A9995 /* NCStringTests.m */,
 				65BC2DEA18DE9A82002A9995 /* NCDictionaryTests.m */,
+				65BC2DFB18DFCC1A002A9995 /* NCObjectTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -415,16 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65BC2DB718DE626A002A9995 /* .gitkeep in Resources */,
 				460FB1B9695348CFB2758C60 /* Images.xcassets in Resources */,
-				65BC2DC918DE6519002A9995 /* .gitkeep in Resources */,
-				65BC2DCE18DE6519002A9995 /* .gitkeep in Resources */,
-				65BC2DCA18DE6519002A9995 /* .gitkeep in Resources */,
-				65BC2DB618DE626A002A9995 /* .gitkeep in Resources */,
-				65BC2DC818DE6519002A9995 /* .gitkeep in Resources */,
-				65BC2DCF18DE6519002A9995 /* .gitkeep in Resources */,
-				65BC2DCB18DE6519002A9995 /* .gitkeep in Resources */,
-				65BC2DCD18DE6519002A9995 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,8 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65BC2DEB18DE9A82002A9995 /* NCDictionaryTests.m in Sources */,
-				65BC2DEF18DE9D8B002A9995 /* NCRedact.m in Sources */,
-				65BC2DE718DE6EBA002A9995 /* NSObject+Redact.m in Sources */,
+				65BC2DFC18DFCC1A002A9995 /* NCObjectTests.m in Sources */,
 				65BC2DE918DE7037002A9995 /* NCStringTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,9 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A22BCF19FC44FF9BA608862 /* main.m in Sources */,
-				65BC2DEE18DE9D8B002A9995 /* NCRedact.m in Sources */,
 				65BC2DCC18DE6519002A9995 /* NCAppDelegate.m in Sources */,
-				65BC2DE618DE6EBA002A9995 /* NSObject+Redact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

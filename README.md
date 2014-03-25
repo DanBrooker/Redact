@@ -8,23 +8,41 @@ Redact sensitive strings from your logs with `[obj redactedDescription]`, simila
 By default redacts the password property for dictionaries and basic key value styled logs.
 
 Redact a dictionary
-```
-[@{@"password": "secret",@"username": @"user01"} redactedDescription]
--> {
-     password: [REDACTED];
-     username: "user01";
-   }
-```
+
+    [@{@"password": "secret",@"username": @"user01"} redactedDescription]
+    -> {
+         password: [REDACTED];
+         username: "user01";
+       }
 
 Redact a string
-```
-[@"password = secret; username = user01" redactedDescription]
--> password = [REDACTED]; username = user01
-```
+
+    [@"password = secret; username = user01" redactedDescription]
+    -> password = [REDACTED]; username = user01
+
 
 ## Usage
 
-To run the test cases; clone the repo, and run `pod install` from the Example directory first.
+    #import "redact.h"
+
+Then use `[obj redactedDescription];` or use RedactedLog() instead of NSLog
+
+
+You could replace NSLog within your project using this following macro in the .pch file
+
+    #define NSLog RedactedLog
+
+By default `password` is a redacted key, but it's easy to add more.
+
+    [NSRedact addRedactedKey:@"secret_key"];
+or use redact to trim your logs down
+
+    NSString *path = [[NSBundle mainBundle] bundlePath];
+    [NSRedact addRedactedString:path with:@"[BUNDLE]"];
+
+## Tests
+
+To run the test cases; clone the repo, and run `pod install` from the Example directory. Then open the workspace and run the tests.
 
 ## Installation
 
@@ -40,4 +58,3 @@ Daniel Brooker, dan@nocturnalcode.com, @DraconisNZ
 ## License
 
 redact is available under the MIT license. See the LICENSE file for more info.
-
