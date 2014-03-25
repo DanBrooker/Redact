@@ -9,7 +9,7 @@
 #import "NCAppDelegate.h"
 #import "Redact.h"
 
-#define NSLog RedactedLog
+//#define NSLog RedactedLog
 
 @implementation NCAppDelegate
 

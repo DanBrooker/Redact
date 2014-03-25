@@ -93,6 +93,8 @@
     // Slightyl more complex search for key value pairs
     [NCRedact.sharedInstance.redactionary enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         
+        // TODO: Maybe make the patterns extendable
+        
         // NSDictionary description format
         NSString *regexp = [NSString stringWithFormat:@"\"%@\" = .*?;",key];
         [mutable substituteAll:regexp with:[NSString stringWithFormat:@"%@ = %@;",key,obj]];

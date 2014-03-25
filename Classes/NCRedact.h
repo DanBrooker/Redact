@@ -34,12 +34,39 @@
  @param string The string to substitute for the redacted value
  */
 + (void)addRedactedKey:(NSString *)key with:(NSString *)string;
-+ (void)addRedactedString:(NSString *)string;
-+ (void)addRedactedString:(NSString *)string with:(NSString *)differentString;
 
+/**
+ Add a string to be redacted (found and replaced)
+ 
+ @param string The string to found and replaced
+ */
++ (void)addRedactedString:(NSString *)string;
+
+/**
+ Add a string to be redacted (found and replaced)
+ 
+ @param string The string to found
+ @param replacement The string to be the replacement
+ */
++ (void)addRedactedString:(NSString *)string with:(NSString *)replacement;
+
+/**
+ Redact a string
+ 
+ @param string The string that needs to be redacted
+ 
+ @return A redacted string
+ */
 + (NSString *)redactString:(NSString *)string;
 
 @end
 
-extern void RedactedLog(NSString *format, ...);
-extern void RedactedLogv(NSString *format, va_list args);
+/**
+ NSLog replacement that will redact and the log to stderr
+ */
+extern void RedactedLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
+
+/**
+ NSLogv replacement that will redact and the log to stderr
+ */
+extern void RedactedLogv(NSString *format, va_list args) NS_FORMAT_FUNCTION(1,0);
