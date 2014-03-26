@@ -25,12 +25,13 @@ Redact a string
 
     #import "Redact.h"
 
-Then use `[obj redactedDescription];` 
+Then use `[obj redactedDescription];`
 
-or use RedactedLog() instead of NSLog() by adding the following macro into your .pch file
+or use RedactedLog() instead of NSLog() by adding one of the following macro sinto your .pch file
 
-    #import "Redact.h"
-    #define NSLog RedactedLog
+    #define NSLog RedactedLogF // if you would like filename and function name
+    // or
+    #define NSLog RedactedLog // cleaner log and without any extra meta info
 
 
 By default `password` is a redacted key, but it's easy to add more.
@@ -47,10 +48,10 @@ To run the test cases; clone the repo, and run `pod install` from the Example di
 
 ## Installation
 
-redact is available through [CocoaPods](http://cocoapods.org), to install
+Redact is available through [CocoaPods](http://cocoapods.org), to install
 it simply add the following line to your Podfile:
 
-    pod "redact"
+    pod "Redact"
 
 ## Author
 
@@ -58,4 +59,4 @@ Daniel Brooker, dan@nocturnalcode.com, @DraconisNZ
 
 ## License
 
-redact is available under the MIT license. See the LICENSE file for more info.
+Redact is available under the MIT license. See the LICENSE file for more info.

@@ -61,12 +61,20 @@
 
 @end
 
+#define RedactedLogF(...) NCLogF(__FILE__,__LINE__,__FUNCTION__,__VA_ARGS__)
+#define RedactedLog NCLog
+
+/**
+ NSLog replacement that will redact and the log to stderr, include filename and function
+ */
+extern void NCLogF(const char *filename, int lineNumber, const char *functionName, NSString *format, ...) NS_FORMAT_FUNCTION(4,5);
+
 /**
  NSLog replacement that will redact and the log to stderr
  */
-extern void RedactedLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
+extern void NCLog(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
 
 /**
  NSLogv replacement that will redact and the log to stderr
  */
-extern void RedactedLogv(NSString *format, va_list args) NS_FORMAT_FUNCTION(1,0);
+extern void NCLogv(NSString *format, va_list args) NS_FORMAT_FUNCTION(1,0);

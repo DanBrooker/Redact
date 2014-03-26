@@ -125,15 +125,26 @@
 
 @end
 
-void RedactedLog(NSString *format, ...)
+void NCLogF(const char *filename, int lineNumber, const char *functionName, NSString *format, ...)
 {
-	va_list args;
+    va_list args;
 	va_start(args, format);
-    RedactedLogv(format,args);
+    NSString *file = [[NSString stringWithUTF8String:filename] lastPathComponent];
+    NSString *extendedFormat = [NSString stringWithFormat:@"%@:%d %s ",file,lineNumber,functionName];
+    extendedFormat = [extendedFormat stringByAppendingString:format];
+    NCLogv(extendedFormat,args);
     va_end(args);
 }
 
-void RedactedLogv(NSString *format, va_list args)
+void NCLog(NSString *format, ...)
+{
+	va_list args;
+	va_start(args, format);
+    NCLogv(format,args);
+    va_end(args);
+}
+
+void NCLogv(NSString *format, va_list args)
 {
     NSString *string = [[NSString alloc] initWithFormat:format arguments:args];
     
