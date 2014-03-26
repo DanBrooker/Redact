@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = "redact"
+  s.name             = "Redact"
   s.version          = "0.1.0"
   s.summary          = "Redact passwords or unnessary details from logs and strings"
   s.description      = <<-DESC

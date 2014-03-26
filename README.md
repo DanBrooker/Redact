@@ -1,4 +1,4 @@
-# redact
+# Redact
 
 [![Version](http://cocoapod-badges.herokuapp.com/v/redact/badge.png)](http://cocoadocs.org/docsets/redact)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/redact/badge.png)](http://cocoadocs.org/docsets/redact)
@@ -23,22 +23,23 @@ Redact a string
 
 ## Usage
 
-    #import "redact.h"
+    #import "Redact.h"
 
-Then use `[obj redactedDescription];` or use RedactedLog() instead of NSLog
+Then use `[obj redactedDescription];` 
 
+or use RedactedLog() instead of NSLog() by adding the following macro into your .pch file
 
-You could replace NSLog within your project using this following macro in the .pch file
-
+    #import "Redact.h"
     #define NSLog RedactedLog
+
 
 By default `password` is a redacted key, but it's easy to add more.
 
-    [NSRedact addRedactedKey:@"secret_key"];
+    [NCRedact addRedactedKey:@"secret_key"];
 or use redact to trim your logs down
 
     NSString *path = [[NSBundle mainBundle] bundlePath];
-    [NSRedact addRedactedString:path with:@"[BUNDLE]"];
+    [NCRedact addRedactedString:path with:@"[BUNDLE]"];
 
 ## Tests
 
